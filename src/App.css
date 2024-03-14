@@ -11,6 +11,8 @@
   width: 300px;
   text-align: center;
   border: 1px solid gray;
+  margin: 15px;
+  padding: 15px;
 }
 .card-img {
   width: 100px;
