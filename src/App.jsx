@@ -24,7 +24,7 @@ function App() {
       alert('already added in cart')
     }
   }
-
+  console.log(cart)
   return (
     <>
       <div className="main-container">
@@ -39,6 +39,15 @@ function App() {
             <div className="cart-title">
               <h3>Name</h3>
               <h3>Price</h3>
+            </div>
+            <div>
+              {cart.map((item, index) => (
+                  <div key={item.id} className='cart-title'>
+                    <p>{index + 1}</p>
+                    <h3>{item.title.slice(0, 10)}</h3>
+                    <h3>{item.price}</h3>
+                  </div>
+                ))}
             </div>
           </div>
       </div>
