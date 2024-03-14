@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types'
 
-const SingleProduct = ({product}) => {
-    console.log(product)
-    const {title, price, image, description, category} = product;
+const SingleProduct = ({product, handleCart}) => {
+    const {title, price, image, description} = product;
     return(
         <>
             <div>
             <div className="card">
               <img className='card-img' src={image} alt="" />
-              <h3>{title}</h3>
+              <h3>{title.slice(0, 25)}</h3>
               <p>{description}</p>
               <div className="card-footer">
                 <h3>{price}$</h3>
-                <button className='add-btn'>Add To Cart</button>
+                <button onClick={() => handleCart(product)} className='add-btn'>Add To Cart</button>
               </div>
             </div>
             </div>
@@ -21,5 +20,6 @@ const SingleProduct = ({product}) => {
 };
 SingleProduct.propTypes ={
     product: PropTypes.object,
+    handleCart: PropTypes.func,
 }
 export default SingleProduct;

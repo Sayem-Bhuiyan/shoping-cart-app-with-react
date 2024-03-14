@@ -1,6 +1,6 @@
 .main-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .cart-container {
   width: 350px;
@@ -13,11 +13,16 @@
   border: 1px solid gray;
   margin: 15px;
   padding: 15px;
+  border-radius: 20px;
 }
 .card-img {
   width: 100px;
 }
 .card-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.cart-title {
   display: flex;
   justify-content: space-around;
 }
