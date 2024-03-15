@@ -24,7 +24,11 @@ function App() {
       alert('already added in cart')
     }
   }
-  console.log(cart)
+
+  const handleDelete =(id) => {
+    const newCart = cart.filter(item => item.id !== id);
+    setCart(newCart)
+  }
   return (
     <>
       <div className="main-container">
@@ -46,6 +50,7 @@ function App() {
                     <p>{index + 1}</p>
                     <h3>{item.title.slice(0, 10)}</h3>
                     <h3>{item.price}</h3>
+                    <button onClick={() => handleDelete(item.id)} className='delete-btn'>X</button>
                   </div>
                 ))}
             </div>

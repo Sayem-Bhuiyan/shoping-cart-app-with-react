@@ -5,6 +5,11 @@
 .cart-container {
   width: 350px;
   box-shadow: 4px 4px 8px gray;
+  flex: 1;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -25,4 +30,13 @@
 .cart-title {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.delete-btn {
+  color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+  padding: 5px;
+  margin: 0;
+  height: 30px;
 }
